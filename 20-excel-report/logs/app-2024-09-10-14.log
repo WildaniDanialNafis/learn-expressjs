@@ -1,0 +1,23 @@
+
+[LOGGER] 2024-09-10 14:33:02.842 PM error: barangCollection_ is not defined
+[LOGGER] 2024-09-10 14:35:31.540 PM error: Anda belum login.
+[LOGGER] 2024-09-10 14:35:36.104 PM error: uncaughtException: barangCollection_ is not defined
+ReferenceError: barangCollection_ is not defined
+    at getAllBarang (file:///C:/expressjs/18-error/src/controllers/barangController.js:8:24)
+    at Layer.handle [as handle_request] (C:\expressjs\18-error\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\expressjs\18-error\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\expressjs\18-error\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\expressjs\18-error\node_modules\express\lib\router\layer.js:95:5)
+    at C:\expressjs\18-error\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\expressjs\18-error\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\expressjs\18-error\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\expressjs\18-error\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\expressjs\18-error\node_modules\express\lib\router\index.js:47:12)
+[LOGGER] 2024-09-10 14:40:41.514 PM error: Anda belum login.
+[LOGGER] 2024-09-10 14:40:55.203 PM error: controllers/barangControler.js:getAllBarang - ReferenceError: barangCollection_ is not defined
+[LOGGER] 2024-09-10 14:49:21.006 PM error: Anda belum login.
+[LOGGER] 2024-09-10 14:49:25.200 PM error: controllers/barangControler.js:getAllBarang - barangCollection_ is not defined
+[LOGGER] 2024-09-10 14:53:51.244 PM error: Anda belum login.
+[LOGGER] 2024-09-10 14:54:57.218 PM error: Anda belum login.
+[LOGGER] 2024-09-10 14:57:02.729 PM error: controllers/barangControler.js:getAllBarang - barangCollection_ is not defined
+[LOGGER] 2024-09-10 14:57:05.697 PM error: controllers/barangControler.js:getAllBarang - barangCollection_ is not defined

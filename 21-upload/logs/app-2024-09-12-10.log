@@ -1,0 +1,10 @@
+[LOGGER] 2024-09-12 10:00:18.757 AM error: controllers/barangControler.js:editBarang - input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+[LOGGER] 2024-09-12 10:37:23.402 AM error: controllers/barangControler.js:setEditBarang - Expected a string but received a undefined
+[LOGGER] 2024-09-12 10:37:50.063 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'
+[LOGGER] 2024-09-12 10:41:00.789 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'
+[LOGGER] 2024-09-12 10:46:20.367 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'
+[LOGGER] 2024-09-12 10:47:17.069 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'
+[LOGGER] 2024-09-12 10:51:52.260 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'
+[LOGGER] 2024-09-12 10:54:23.319 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'
+[LOGGER] 2024-09-12 10:55:33.569 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'
+[LOGGER] 2024-09-12 10:56:29.234 AM error: ENOENT: no such file or directory, open 'C:\expressjs\21-upload\file-input\Barang.xlsx'

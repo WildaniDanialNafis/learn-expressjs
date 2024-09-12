@@ -1,0 +1,128 @@
+import mongoose from "mongoose";
+const ObjectId = mongoose.Types.ObjectId;
+import barangCollection from "../models/barangModel.js";
+import barangValid from "../validation/barangValidation.js";
+
+const getAllBarang = async (req, res, next) => {
+    try {
+        const barang = await barangCollection.find({});
+        const data = {
+            title: `Barang`,
+            layout: `layout/main`,
+            message: req.flash('message'),
+            data: barang, 
+        }
+        res.render('barang/index', data);
+    } catch (err) {
+        next(new Error("controllers/barangControler.js:getAllBarang - " + err.message));
+    }
+}
+
+const insertBarang = async (req, res, next) => {
+    try {
+        const data = {
+            title: `Insert Barang`,
+            layout: `layout/main`,
+            message: req.flash('message'),
+            data: req.flash('data')[0]
+        };
+        res.render('barang/insert', data);
+    } catch (err) {
+        next(new Error("controllers/barangControler.js:insertBarang - " + err.message));
+    }
+}
+
+const setNewBarang = async (req, res, next) => {
+    try {
+        const out = barangValid(req.body);
+        if (out.message.length > 0) {
+            req.flash('message', [
+                'error',
+                'Gagal',
+                out.message[0]
+            ]);
+            req.flash('data', out.data);
+            res.redirect('/barang/insert');
+        } else {
+            const hasil = await barangCollection.insertMany([out.data]);
+            if (hasil) {
+                req.flash('message', [
+                    'success',
+                    'Berhasil',
+                    'Berhasil menambahkan barang baru!'
+                ]);
+                res.redirect('/barang');
+            } else {
+                req.flash('message', [
+                    'danger',
+                    'Gagal',
+                    'Gagal menambahkan barang baru!'
+                ]);
+                res.redirect('/barang/insert');
+            }
+        }
+    } catch (err) {
+        next(new Error("controllers/barangControler.js:setNewBarang - " + err.message));
+    }
+}
+
+const editBarang = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        let barang = await barangCollection.findOne({ _id: new ObjectId(id) });
+        const editData = req.flash('data')[0];
+        if (editData) {
+            barang = editData;
+        } 
+        const data = {
+            title: `Edit Barang`,
+            layout: `layout/main`,
+            message: req.flash('message'),
+            data: barang,
+        }
+        res.render('barang/edit', data);
+    } catch (err) {
+        next(new Error("controllers/barangControler.js:editBarang - " + err.message));
+    }
+}
+
+const setEditBarang = async (req, res, next) => {
+    try {
+        const { id, mode } = req.body;
+        const out = barangValid(req.body);
+        const outerror = [{ _id: new ObjectId(id), ...out.data }];
+        if( out.message.length > 0 ) {
+            req.flash('message', [
+                'error',
+                'Gagal',
+                out.message[0]
+            ])
+            req.flash('data', outerror);
+            res.redirect(`/barang/${id}`);
+        } else {
+            if (mode == 'update') {
+                const hasil = await barangCollection.updateOne({_id: new ObjectId(id)}, {$set: out.data});
+                if (hasil) {
+                    req.flash('message', ['success', 'Berhasil', 'Berhasil mengubah data barang!']);
+                    res.redirect('/barang');
+                } else {
+                    req.flash('message', ['danger', 'Gagal', 'Gagal mengubah data barang!'])
+                    res.redirect(`/barang/${id}`)
+                }
+            } else {
+                const hasil = await barangCollection.deleteOne({_id: new ObjectId(id)});
+                if (hasil) {
+                    req.flash('message', ['success', 'Berhasil', 'Berhasil menghapus data barang!']);
+                    res.redirect('/barang');
+                } else {
+                    req.flash('message', ['danger', 'Gagal', 'Gagal menghapus data barang!'])
+                    res.redirect(`/barang/${id}`);
+                }
+            }
+        }
+    } catch(err) {
+        next(new Error("controllers/barangControler.js:setEditBarang - " + err.message));
+    }
+}
+
+export { getAllBarang, insertBarang, setNewBarang, editBarang, setEditBarang };

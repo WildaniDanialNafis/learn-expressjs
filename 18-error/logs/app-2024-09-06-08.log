@@ -1,0 +1,20 @@
+[LOGGER] 2024-09-06 08:41:26.197 AM error: uncaughtException: Operation `users.findOne()` buffering timed out after 10000ms
+MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\expressjs\16-crud2\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[LOGGER] 2024-09-06 08:43:08.708 AM error: uncaughtException: Operation `users.findOne()` buffering timed out after 10000ms
+MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\expressjs\16-crud2\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[LOGGER] 2024-09-06 08:45:14.651 AM error: uncaughtException: Operation `users.findOne()` buffering timed out after 10000ms
+MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\expressjs\16-crud2\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)
+[LOGGER] 2024-09-06 08:49:39.903 AM error: uncaughtException: Operation `users.findOne()` buffering timed out after 10000ms
+MongooseError: Operation `users.findOne()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\expressjs\16-crud2\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:581:17)
+    at process.processTimers (node:internal/timers:519:7)

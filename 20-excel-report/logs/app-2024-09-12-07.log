@@ -1,0 +1,6 @@
+[LOGGER] 2024-09-12 07:59:26.017 AM error: uncaughtException: generatePdf is not defined
+ReferenceError: generatePdf is not defined
+    at file:///C:/expressjs/18-error/src/routes/barangRoute.js:10:30
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:316:24)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:123:5)

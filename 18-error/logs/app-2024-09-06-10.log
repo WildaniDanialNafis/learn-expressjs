@@ -1,0 +1,14 @@
+[LOGGER] 2024-09-06 10:17:05.985 AM error: uncaughtException: 84110000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1590:SSL alert number 80
+
+MongoServerSelectionError: 84110000:error:0A000438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1590:SSL alert number 80
+
+    at Topology.selectServer (C:\expressjs\16-crud2\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\expressjs\16-crud2\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async FindCursor._initialize (C:\expressjs\16-crud2\node_modules\mongodb\lib\cursor\find_cursor.js:51:26)
+    at async FindCursor.cursorInit (C:\expressjs\16-crud2\node_modules\mongodb\lib\cursor\abstract_cursor.js:471:27)
+    at async FindCursor.fetchBatch (C:\expressjs\16-crud2\node_modules\mongodb\lib\cursor\abstract_cursor.js:503:13)
+    at async FindCursor.next (C:\expressjs\16-crud2\node_modules\mongodb\lib\cursor\abstract_cursor.js:228:13)
+    at async Collection.findOne (C:\expressjs\16-crud2\node_modules\mongodb\lib\collection.js:274:21)
+    at async model.Query._findOne (C:\expressjs\16-crud2\node_modules\mongoose\lib\query.js:2602:15)
+    at async model.Query.exec (C:\expressjs\16-crud2\node_modules\mongoose\lib\query.js:4412:63)
+    at async postLogin (file:///C:/expressjs/16-crud2/src/controllers/login.js:29:26)

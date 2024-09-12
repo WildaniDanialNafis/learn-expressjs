@@ -1,0 +1,44 @@
+<!-- signup.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/path/to/styles.css"> <!-- Update path to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2 class="header">Login</h2>
+        <p><%= message %></p>
+        <form action="/login" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-50">
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="password">Password</label>
+                </div>
+                <div class="col-50">
+                    <input type="password" id="password" name="password">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    &nbsp; <!-- Space for alignment -->
+                </div>
+                <div class="col-50">
+                    <button type="submit" class="btn primary">Register</button>
+                </div>
+            </div>
+        </form>
+        <a href="/login" class="btn">Login</a>
+    </div>
+</body>
+</html>
